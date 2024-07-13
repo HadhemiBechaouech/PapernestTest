@@ -27,7 +27,8 @@ class Newspaper {
     cy.get(selectorsNewspaper.btnchoisir).click();
   }
   fillInfoForm() {
-    cy.get(selectorsNewspaper.inputemail).type("Hadhemi222@papernest.com");
+    var user_email = `user${Date.now()}test@papernest.com`;
+    cy.get(selectorsNewspaper.inputemail).type(user_email);
     cy.get(selectorsNewspaper.inputTel).type("612345678");
     cy.get(selectorsNewspaper.civilite1).click();
 
